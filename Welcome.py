@@ -1,3 +1,3 @@
-name = input('Whats your name?')
+name = input('Whats your name? ')
 
-print(name)
+print('Welcome ' + name + '!' + 'Its nice to meet you!')
