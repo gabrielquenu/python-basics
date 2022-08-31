@@ -1,0 +1,10 @@
+n = input('Type anything you want: ')
+
+print('Input primitive type: {}'.format(type(n)))
+print('Is there a space in the input? {}'.format(n.isspace()))
+print('Is the value a number? {}'.format(n.isnumeric()))
+print('Is the value a alphabetic? {}'.format(n.isalpha()))
+print('Is the value a alphanumeric? {}'.format(n.isalnum()))
+print('Is the value a upper case? {}'.format(n.isupper()))
+print('Is the value a lower case? {}'.format(n.islower()))
+print('Is the value a capitalized? {}'.format(n.istitle()))
