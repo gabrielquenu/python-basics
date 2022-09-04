@@ -1,5 +1,6 @@
 from math import trunc, hypot, cos, sin, tan, radians
-from random import randint, shuffle
+from random import choice, shuffle
+from playsound import playsound
 
 
 class Main:
@@ -12,15 +13,15 @@ class Main:
         oppositePeccary = float(input('Insert the opposite peccary in cm: '))
         adjacentPeccary = float(input('Insert the adjacent peccary in cm: '))
 
-        print('The hypotenuse is {} cm.'
+        print('The hypotenuse is {:.2f} cm.'
               .format(hypot(oppositePeccary, adjacentPeccary)))
 
     def Run3(self):
         angle = float(input('Insert an angle: '))
 
-        print('Tangent: {}'.format(tan(radians(angle))))
-        print('Sine: {}'.format(sin(radians(angle))))
-        print('Cosine: {}'.format(cos(radians(angle))))
+        print('Tangent: {:.2f}'.format(tan(radians(angle))))
+        print('Sine: {:.2f}'.format(sin(radians(angle))))
+        print('Cosine: {:.2f}'.format(cos(radians(angle))))
 
     def Run4(self):
         students = []
@@ -29,10 +30,10 @@ class Main:
         students.append(input('Insert the third student: '))
         students.append(input('Insert the fourth student: '))
 
-        studentPosition = randint(0, 3)
+        selectedStudent = choice(students)
 
         print('Please {}, erase the blackboard.'.format(
-            students[studentPosition]))
+            selectedStudent))
 
     def Run5(self):
         students = []
@@ -49,6 +50,9 @@ class Main:
         print('3. {}'.format(students[2]))
         print('4. {}'.format(students[3]))
 
+    def Run6(self):
+        playsound('./Assets/sample.mp3')
+
 
 main = Main()
-main.Run5()
+main.Run6()
